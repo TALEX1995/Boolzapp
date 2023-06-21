@@ -1,3 +1,10 @@
+/* Custom Properties */
+
+:root {
+    --bg-gray: #eaeaea;
+}
+
+
 /* Utilities */
 
 
@@ -23,9 +30,18 @@
 #sidebar-main-app {
     height: 100%;
     width: 500px;
-    background-color: black;
 }
 
+.header-sidebar {
+    height: 80px;
+    background-color: var(--bg-gray);
+}
+
+.header-sidebar-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 
 /* Message Area */
 
