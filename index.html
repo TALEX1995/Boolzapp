@@ -25,9 +25,9 @@
         <!-- Main app -->
         <div id="sidebar-main-app" class="d-flex flex-column">
             <!-- Header sidebar -->
-            <div class="header-sidebar d-flex align-items-center justify-content-between">
+            <header class="header-sidebar d-flex align-items-center justify-content-between">
                 <div class="header-sidebar-left d-flex align-items-center">
-                    <img src="img/avatar_io.jpg" alt="My Avatar picture" class="mx-3">
+                    <img src="img/avatar_io.jpg" alt="My Avatar picture" class="mx-3 img-small-circle">
                     <h5>Nome Utente</h5>
                 </div>
                 <div class="d-flex align-items-center header-sidebar-right">
@@ -35,14 +35,14 @@
                     <i class="fa-solid fa-message"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
-            </div>
+            </header>
 
             <!-- Notice message -->
             <div class="notice-new-message d-flex align-items-center">
                 <i class="fa-solid fa-bell-slash"></i>
                 <div>
                     <span class="d-block">Ricevi notifiche di nuovi messaggi</span>
-                    <span class="notice-desktop">Attiva notifiche desktop</span>
+                    <span class="notice-desktop text-gray">Attiva notifiche desktop</span>
                 </div>
             </div>
 
@@ -60,42 +60,25 @@
                     <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
                     <span class="my-3 fw-bolder">Michele</span>
                 </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
-                </div>
-
             </div>
-
         </div>
 
-        <div id="message-area">
-
-        </div>
+        <main id="message-area">
+            <header class="header-message-area d-flex align-items-center justify-content-between">
+                <div class="header-message-left d-flex m-3">
+                    <img src="img/avatar_io.jpg" alt="My Avatar picture" class="img-small-circle">
+                    <div class="d-flex flex-column ms-3">
+                        <h5 class="m-0">Nome Utente</h5>
+                        <span class="text-gray">Ultimo accesso oggi alle..</span> 
+                    </div>
+                </div>
+                <div class="d-flex align-items-center header-message-right">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </header>
+        </main>
 
     </div>
 </body>

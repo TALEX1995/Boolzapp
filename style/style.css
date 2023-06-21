@@ -9,9 +9,23 @@
 
 /* Utilities */
 
+.img-small-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.text-gray {
+    color: gray;
+}
 
 /* Generic */
 
+header .fa-solid {
+    font-size: 25px;
+    margin-right: 20px;
+    color: var(--color-icons);
+}
 
 /* Body */
 body {
@@ -34,27 +48,15 @@ body {
 #sidebar-main-app {
     height: 100%;
     width: 500px;
+    border-right: 1px solid blue;
 }
 
-.header-sidebar {
+.header-sidebar,
+.header-message-area {
     height: 80px;
     background-color: var(--bg-gray);
 }
 
-
-/* Header Sidebar left */
-.header-sidebar-left img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-/* Header Sidebar right */
-.header-sidebar-right .fa-solid {
-    font-size: 25px;
-    margin-right: 20px;
-    color: var(--color-icons);
-}
 
 
 /* Notice new message */
@@ -73,7 +75,6 @@ body {
 
 .notice-desktop {
     text-decoration: underline;
-    color: gray;
 }
 
 
@@ -98,19 +99,19 @@ body {
 
 
 /* Chat Area */
+.chat-area {
+    background-color: white;
+}
 
 .chat-area .chat-user {
     background-color: white;
     border-bottom: 1px solid var(--bg-gray);
 }
 
-
-
 .chat-area img {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    
+    border-radius: 50%; 
 }
 
 
@@ -119,5 +120,4 @@ body {
 #message-area {
     height: 100%;
     flex-grow: 1;
-    background-color: blue;
 }
