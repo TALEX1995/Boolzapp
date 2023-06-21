@@ -121,3 +121,39 @@ body {
     height: 100%;
     flex-grow: 1;
 }
+
+
+/* Message Views Area  */
+.message-views-area {
+    height: calc(100% - 180px);
+    background-image: url(../img/mine.jpg);
+}
+
+
+.message .date-message {
+    font-size: 0.75rem;
+}
+
+.message-views-area .message {
+    border-radius: 10px;
+    width: 40%;
+    background-color: white;
+}
+
+.message-views-area .js-flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+.message-views-area .js-sent-message {
+    background-color: #d5f9ba;
+}
+
+
+
+
+/* Message views area */
+.message-text-area {
+    height: 100px;
+    background-color: var(--bg-gray);
+}
