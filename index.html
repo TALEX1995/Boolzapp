@@ -22,7 +22,9 @@
 </head>
 <body>
     <div id="root" class="main-app d-flex">
-        <div id="sidebar-main-app">
+        <!-- Main app -->
+        <div id="sidebar-main-app" class="d-flex flex-column">
+            <!-- Header sidebar -->
             <div class="header-sidebar d-flex align-items-center justify-content-between">
                 <div class="header-sidebar-left d-flex align-items-center">
                     <img src="img/avatar_io.jpg" alt="My Avatar picture" class="mx-3">
@@ -34,6 +36,8 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
+
+            <!-- Notice message -->
             <div class="notice-new-message d-flex align-items-center">
                 <i class="fa-solid fa-bell-slash"></i>
                 <div>
@@ -41,12 +45,51 @@
                     <span class="notice-desktop">Attiva notifiche desktop</span>
                 </div>
             </div>
+
+            <!-- Search input -->
             <div class="search-area p-2">
                 <div class="search-chat">
                     <span class="fa fa-search form-control-chat"></span>
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
                 </div>
-             </div>
+            </div>
+
+            <!-- Chat area -->
+            <div class="chat-area flex-grow-1 overflow-auto">
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+                <div class="chat-user d-flex align-items-top">
+                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
+                    <span class="my-3 fw-bolder">Michele</span>
+                </div>
+
+            </div>
 
         </div>
 

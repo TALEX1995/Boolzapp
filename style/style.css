@@ -77,6 +77,7 @@ body {
 }
 
 
+/* Search input sidebar */
 .search-chat .form-control {
     padding-left: 2.375rem;
     border-radius: 0;
@@ -96,6 +97,21 @@ body {
 }
 
 
+/* Chat Area */
+
+.chat-area .chat-user {
+    background-color: white;
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+
+
+.chat-area img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+}
 
 
 /* Message Area */
