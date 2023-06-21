@@ -152,8 +152,9 @@ body {
 
 
 
-/* Message views area */
+/* Message Text area */
 .message-text-area {
     height: 100px;
     background-color: var(--bg-gray);
 }
+
