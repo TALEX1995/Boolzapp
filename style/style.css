@@ -163,4 +163,9 @@ textarea {
 }
 
 
+.message-text-area .fa-solid,
+.message-text-area .fa-regular {
+    color: var(--color-icons);
+}
+
 
