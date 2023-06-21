@@ -158,3 +158,9 @@ body {
     background-color: var(--bg-gray);
 }
 
+textarea {
+    resize: none;
+}
+
+
+
