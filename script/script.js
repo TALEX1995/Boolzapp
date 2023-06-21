@@ -204,9 +204,14 @@ const app = Vue.createApp ({
             ]
 
 
-            
+
         }
     }
 
 
 })
+
+
+// Mount app
+
+app.mount('#root')
