@@ -3,6 +3,7 @@
 :root {
     --bg-gray: #eaeaea;
     --color-icons: #b1b1b1;
+    --lightblue: #8edafc;
 }
 
 
@@ -21,7 +22,6 @@ body {
 
 
 /* Root  */
-
 .main-app {
     height: 90vh;
     width: 80vw;
@@ -31,7 +31,6 @@ body {
 
 
 /* Sidebar main app */
-
 #sidebar-main-app {
     height: 100%;
     width: 500px;
@@ -41,6 +40,7 @@ body {
     height: 80px;
     background-color: var(--bg-gray);
 }
+
 
 /* Header Sidebar left */
 .header-sidebar-left img {
@@ -56,6 +56,25 @@ body {
     color: var(--color-icons);
 }
 
+
+/* Notice new message */
+.notice-new-message .fa-solid {
+    font-size: 30px;
+    margin: 15px;
+    color: var(--lightblue);
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.notice-new-message {
+    background-color: var(--lightblue);
+}
+
+.notice-desktop {
+    text-decoration: underline;
+    color: gray;
+}
 
 
 
