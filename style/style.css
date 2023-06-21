@@ -15,5 +15,22 @@
     width: 80vw;
     margin: auto;
     margin-top: 5vh;
-    background-color: yellow;
+}
+
+
+/* Sidebar main app */
+
+#sidebar-main-app {
+    height: 100%;
+    width: 500px;
+    background-color: black;
+}
+
+
+/* Message Area */
+
+#message-area {
+    height: 100%;
+    flex-grow: 1;
+    background-color: blue;
 }
