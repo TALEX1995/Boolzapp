@@ -56,9 +56,9 @@
 
             <!-- Chat area -->
             <div class="chat-area flex-grow-1 overflow-auto">
-                <div class="chat-user d-flex align-items-top">
-                    <img src="img/avatar_1.jpg" alt="Michele" class="m-3">
-                    <span class="my-3 fw-bolder">Michele</span>
+                <div v-for="contact in contacts" class="chat-user d-flex align-items-top">
+                    <img :src="takeAvatar(contact)" :alt="contact.name" class="m-3">
+                    <span class="my-3 fw-bolder">{{ contact.name }}</span>
                 </div>
             </div>
         </div>

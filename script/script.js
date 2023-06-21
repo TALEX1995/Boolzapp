@@ -206,8 +206,14 @@ const app = Vue.createApp ({
 
 
         }
+    },
+ 
+    methods: {
+      takeAvatar (currentContact) { 
+        // return 'img/avatar' + currentContact.avatar + '.jpg' 
+        return `img/avatar${currentContact.avatar}.jpg`
+      }
     }
-
 
 })
 
