@@ -1,0 +1,19 @@
+/* Utilities */
+
+
+/* Generic */
+
+
+/* Body */
+
+
+
+/* Root  */
+
+.main-app {
+    height: 90vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: yellow;
+}
