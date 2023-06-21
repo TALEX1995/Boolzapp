@@ -77,6 +77,24 @@ body {
 }
 
 
+.search-chat .form-control {
+    padding-left: 2.375rem;
+    border-radius: 0;
+}
+
+.search-chat .form-control-chat {
+    position: absolute;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    color: var(--color-icons);
+}
+
+.search-area {
+    background-color: var(--bg-gray);
+}
+
 
 
 
