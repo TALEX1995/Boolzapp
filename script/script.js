@@ -10,6 +10,9 @@ const app = Vue.createApp ({
           // Current id used to change chat and message
           currentId: 1,
 
+          // New mwssage
+          newMessage: '',
+
           // User info
           user: {
             name: 'Alex Tanase',
@@ -220,7 +223,9 @@ const app = Vue.createApp ({
 
       currentChat(){
         return this.currentContact.messages;
-      }
+      },
+
+
     },
 
     
@@ -229,10 +234,43 @@ const app = Vue.createApp ({
         // return 'img/avatar' + contact.avatar + '.jpg' 
         return `img/avatar${contact.avatar}.jpg`
       },
-
+      
       setCurrentId (contact) {
         this.currentId = contact.id
+      },
+
+
+      addMessage () {
+        // if(!this.newMessage.lenght) return
+        
+        baseMessage = {
+          status: 'sent',
+          id: new Date().getTime(),
+          date: this.getDateRealTime(),
+        }
+        console.log(baseMessage)
+        
+        
+    
+        
+
+      },
+
+      // Funcition to take the date when sending the message
+      getDateRealTime () {
+
+        const date = new Date
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        const second = date.getSeconds();
+
+        return `${day}/${month}/${year} ${hour}:${minute}:${second}`;
       }
+
+
     }
 
 })
