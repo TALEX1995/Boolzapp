@@ -13,6 +13,9 @@ const app = Vue.createApp ({
           // New mwssage
           newMessage: '',
 
+          // Input Filter
+          searchUser: '',
+
           // User info
           user: {
             name: 'Alex Tanase',
@@ -211,19 +214,32 @@ const app = Vue.createApp ({
                 }
               ],
             }
-          ]
+          ],
+
           
         }
     },
 
     computed: {
+      // Take current contact by ID
       currentContact(){
         return this.contacts.find(contact => contact.id === this.currentId);
       },
 
+      // Take current chat by current contact
       currentChat(){
         return this.currentContact.messages;
       },
+
+      // Chat Filter
+      chatFilter () {
+
+        const user = this.searchUser.toLowerCase()
+        
+        return this.contacts.filter((contact) => {
+          return contact.name.toLowerCase().includes(user)
+        })
+      }
 
 
     },
@@ -251,13 +267,14 @@ const app = Vue.createApp ({
           message: this.newMessage
         }
         
-
         
         this.currentChat.push(newMessage)
     
         this.newMessage = '';
 
-        this.answerTimeout()     
+        this.answerTimeout()  
+        
+         
       },
 
       // Funcition to take the date when sending the message
@@ -292,6 +309,7 @@ const app = Vue.createApp ({
 
         }, "1000");
       },
+
     }
 
 })
