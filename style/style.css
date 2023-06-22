@@ -4,6 +4,9 @@
     --bg-gray: #eaeaea;
     --color-icons: #b1b1b1;
     --lightblue: #8edafc;
+    --sent-message: #d5f9ba;
+    --received-message: white;
+    --bg-input: #fafafa;
 }
 
 
@@ -29,7 +32,7 @@ header .fa-solid {
 
 /* Body */
 body {
-    background: linear-gradient(to top, #d9dbd5 75%, #009688 75%); 
+    background-image: linear-gradient(to top, #d9dbd5 85%, #009688 85%); 
     height: 100vh;
     width: 100vw;
 }
@@ -94,7 +97,7 @@ body {
 }
 
 .search-area {
-    background-color: var(--bg-gray);
+    background-color: var(--bg-input);
 }
 
 
@@ -112,6 +115,11 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 50%; 
+}
+
+.chat-user:hover {
+    cursor: pointer;
+    background-color: rgba(233, 235, 235);
 }
 
 
@@ -136,19 +144,23 @@ body {
 
 .message-views-area .message {
     border-radius: 10px;
-    width: 40%;
-    background-color: white;
 }
 
-.message-views-area .js-flex-end {
-    display: flex;
+.message-views-area .sent {
     justify-content: end;
 }
 
-.message-views-area .js-sent-message {
-    background-color: #d5f9ba;
+.message-views-area .received {
+    justify-content: start;
 }
 
+.message-views-area .sent div {
+    background-color: var(--sent-message);
+}
+
+.message-views-area .received div {
+    background-color: var(--received-message);
+}
 
 
 

@@ -23,12 +23,12 @@
 <body>
     <div id="root" class="main-app d-flex">
         <!-- Main app -->
-        <div id="sidebar-main-app" class="d-flex flex-column">
+        <div id="sidebar-main-app" class="d-flex flex-column flex-shrink-0">
             <!-- Header sidebar -->
             <header class="header-sidebar d-flex align-items-center justify-content-between">
                 <div class="header-sidebar-left d-flex align-items-center">
-                    <img src="img/avatar_io.jpg" alt="My Avatar picture" class="mx-3 img-small-circle">
-                    <h5>Nome Utente</h5>
+                    <img :src="takeAvatar(user)" :alt="user.name" class="mx-3 img-small-circle">
+                    <h5>{{ user.name }}</h5>
                 </div>
                 <div class="d-flex align-items-center header-sidebar-right">
                     <i class="fa-solid fa-circle-notch"></i>
@@ -84,19 +84,19 @@
 
             <!-- Message Views Area -->
             <div class="message-views-area overflow-auto">
-                <div class="m-4">
-                    <div class="message d-flex flex-column pt-3 ps-3 pe-1">
+                <div class="m-4 d-flex sent">
+                    <div class="message d-flex flex-column pt-2 ps-2 pe-1">
+                        <span>Tutto Fatto</span>
+                        <span class="date-message align-self-end">10/01/2020 16:15:22</span>  
+                    </div>   
+                </div>
+                <div class="m-4 d-flex received">
+                    <div class="message d-flex flex-column pt-2 ps-2 pe-1">
                         <span>Tutto Fatto</span>
                         <span class="date-message align-self-end">10/01/2020 16:15:22</span>  
                     </div>   
                 </div>
 
-                <div class="m-4 js-flex-end">
-                    <div class="message d-flex flex-column pt-3 ps-3 pe-1 js-sent-message">
-                        <span>Tutto Fatto</span>
-                        <span class="date-message align-self-end">10/01/2020 16:16:22</span>  
-                    </div>   
-                </div>
                 
             </div>
 
