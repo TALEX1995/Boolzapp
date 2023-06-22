@@ -251,11 +251,13 @@ const app = Vue.createApp ({
           message: this.newMessage
         }
         
+
         
         this.currentChat.push(newMessage)
     
         this.newMessage = '';
 
+        this.answerTimeout()     
       },
 
       // Funcition to take the date when sending the message
@@ -274,9 +276,22 @@ const app = Vue.createApp ({
         if(day < 10) day = `0${day}`
         
         return `${day}/${month}/${year} ${hour}:${minute}:${second}`;
-      }
+      },
 
 
+      answerTimeout () {
+        setTimeout(() => {
+          newReceivedMessage = {
+            status: 'received',
+            id: new Date().getTime(),
+            date: this.getDateRealTime(),
+            message: 'OK'
+          }
+
+          this.currentChat.push(newReceivedMessage)
+
+        }, "1000");
+      },
     }
 
 })
