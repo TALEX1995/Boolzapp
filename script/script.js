@@ -6,10 +6,17 @@ const app = Vue.createApp ({
 
     data: () => {
         return {
+
+          // Current id used to change chat and message
+          currentId: 1,
+
+          // User info
           user: {
             name: 'Alex Tanase',
             avatar: '_io'
           },
+
+          // Contacts and message
           contacts: [
             {
               id: 1,
@@ -202,17 +209,34 @@ const app = Vue.createApp ({
               ],
             }
           ]
-
-
-
+          
         }
     },
- 
+
     methods: {
       takeAvatar (currentContact) { 
         // return 'img/avatar' + currentContact.avatar + '.jpg' 
         return `img/avatar${currentContact.avatar}.jpg`
-      }
+      },
+
+      setCurrentId (currentContact) {
+        this.currentId = currentContact.id
+        console.log(this.currentId)
+      },
+
+      nameFromId () {
+        this.contacts.forEach ((contact) => {
+
+          let nameUserChat = ''
+
+          if(this.currentId === contact.id) {
+            nameUserChat = contact.name
+          }
+          
+          console.log(nameUserChat)
+          return nameUserChat
+        })
+      },
     }
 
 })
