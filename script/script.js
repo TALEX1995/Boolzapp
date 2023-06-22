@@ -213,30 +213,26 @@ const app = Vue.createApp ({
         }
     },
 
+    computed: {
+      currentContact(){
+        return this.contacts.find(contact => contact.id === this.currentId);
+      },
+
+      currentChat(){
+        return this.currentContact.messages;
+      }
+    },
+
+    
     methods: {
-      takeAvatar (currentContact) { 
-        // return 'img/avatar' + currentContact.avatar + '.jpg' 
-        return `img/avatar${currentContact.avatar}.jpg`
+      takeAvatar (contact) { 
+        // return 'img/avatar' + contact.avatar + '.jpg' 
+        return `img/avatar${contact.avatar}.jpg`
       },
 
-      setCurrentId (currentContact) {
-        this.currentId = currentContact.id
-        console.log(this.currentId)
-      },
-
-      nameFromId () {
-        this.contacts.forEach ((contact) => {
-
-          let nameUserChat = ''
-
-          if(this.currentId === contact.id) {
-            nameUserChat = contact.name
-          }
-          
-          console.log(nameUserChat)
-          return nameUserChat
-        })
-      },
+      setCurrentId (contact) {
+        this.currentId = contact.id
+      }
     }
 
 })

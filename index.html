@@ -69,9 +69,9 @@
             <!-- Header message area -->
             <header class="header-message-area d-flex align-items-center justify-content-between">
                 <div class="header-message-left d-flex m-3">
-                    <img src="img/avatar_io.jpg" alt="My Avatar picture" class="img-small-circle">
+                    <img :src="takeAvatar(currentContact)" alt="My Avatar picture" class="img-small-circle">
                     <div class="d-flex flex-column ms-3">
-                        <h5 class="m-0"> {{ nameFromId() }}</h5>
+                        <h5 class="m-0"> {{ currentContact.name }}</h5>
                         <span class="text-gray">Ultimo accesso oggi alle..</span> 
                     </div>
                 </div>
@@ -84,18 +84,13 @@
 
             <!-- Message Views Area -->
             <div class="message-views-area overflow-auto">
-                <div class="m-4 d-flex sent">
+                <div class="m-4 d-flex sent" v-for="message in currentChat" :class="message.status">
                     <div class="message d-flex flex-column pt-2 ps-2 pe-1">
-                        <span>Tutto Fatto</span>
-                        <span class="date-message align-self-end">10/01/2020 16:15:22</span>  
+                        <span>{{ message.message }}</span>
+                        <span class="date-message align-self-end"> {{ message.date }}</span>  
                     </div>   
                 </div>
-                <div class="m-4 d-flex received">
-                    <div class="message d-flex flex-column pt-2 ps-2 pe-1">
-                        <span>Tutto Fatto</span>
-                        <span class="date-message align-self-end">10/01/2020 16:15:22</span>  
-                    </div>   
-                </div>
+                
 
                 
             </div>
