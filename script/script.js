@@ -243,16 +243,18 @@ const app = Vue.createApp ({
       addMessage () {
         // if(!this.newMessage.lenght) return
         
-        baseMessage = {
+
+        newMessage = {
           status: 'sent',
           id: new Date().getTime(),
           date: this.getDateRealTime(),
+          message: this.newMessage
         }
-        console.log(baseMessage)
         
         
+        this.currentChat.push(newMessage)
     
-        
+        this.newMessage = '';
 
       },
 
@@ -261,12 +263,16 @@ const app = Vue.createApp ({
 
         const date = new Date
         const year = date.getFullYear();
-        const month = date.getMonth() + 1;
-        const day = date.getDate();
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
         const hour = date.getHours();
         const minute = date.getMinutes();
         const second = date.getSeconds();
-
+        
+        if(month < 10) month = `0${month}`
+        
+        if(day < 10) day = `0${day}`
+        
         return `${day}/${month}/${year} ${hour}:${minute}:${second}`;
       }
 
