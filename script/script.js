@@ -327,14 +327,20 @@ const app = Vue.createApp ({
 
       // la current chat e readonly quindi dovrò trovare il modo di agire direttamente nei data
       // Delete Message
-      deleteMessage (currentId) {
-        this.currentChat = this.currentChat.filter((message) => {
-          return currentId !== this.currentMessageId
-        })
-        console.log('ciao')
-      }
+      deleteMessage () {
 
+        // this.currentChat = this.currentChat.filter((message) => {
+        //   return message.id !== this.currentMessageId
+        // })
+        // console.log('ciao')
 
+        this.currentContact.messages = this.currentContact.messages.filter((message) => {
+          return message.id !== this.currentMessageId;
+        });
+        
+      },
+
+      
       
     }
 
