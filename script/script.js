@@ -216,6 +216,9 @@ const app = Vue.createApp ({
             }
           ],
 
+          currentMessageId: 0,
+          dropDownRemoveMess: true,
+
           
         }
     },
@@ -239,7 +242,11 @@ const app = Vue.createApp ({
         return this.contacts.filter((contact) => {
           return contact.name.toLowerCase().includes(user)
         })
-      }
+      },
+
+      // currentMessage () {
+      //   return this.currentChat.find(message => message.id === currentMessageId)
+      // }
 
 
     },
@@ -255,6 +262,9 @@ const app = Vue.createApp ({
         this.currentId = contact.id
       },
 
+      setCurrentMessageId (message) {
+        this.currentMessageId = message.id
+      },
 
       addMessage () {
         if(!this.newMessage) return
@@ -309,6 +319,10 @@ const app = Vue.createApp ({
         }, "1000");
       },
 
+
+      toggleRemoveMessage () {
+        this.dropDownRemoveMess = !this.dropDownRemoveMess
+      }
     }
 
 })

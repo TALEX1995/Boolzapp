@@ -87,8 +87,8 @@
                 <div class="m-4 d-flex sent" v-for="message in currentChat" :class="message.status">
                     <div class="message d-flex flex-column ps-2 pe-1">
                         <div class="position-relative">
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <div class="remove-message position-absolute p-2 d-none">
+                            <i @click="setCurrentMessageId(message)" class="fa-solid fa-chevron-down"></i>
+                            <div class="remove-message position-absolute p-2" :class="{'d-none' : dropDownRemoveMess}">
                                 <span>Cancella Messaggio</span>
                             </div>
                         </div>
