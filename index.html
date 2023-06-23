@@ -85,7 +85,13 @@
             <!-- Message Views Area -->
             <div class="message-views-area overflow-auto">
                 <div class="m-4 d-flex sent" v-for="message in currentChat" :class="message.status">
-                    <div class="message d-flex flex-column pt-2 ps-2 pe-1">
+                    <div class="message d-flex flex-column ps-2 pe-1">
+                        <div class="position-relative">
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div class="remove-message position-absolute p-2 d-none">
+                                <span>Cancella Messaggio</span>
+                            </div>
+                        </div>
                         <span>{{ message.message }}</span>
                         <span class="date-message align-self-end"> {{ message.date }}</span>  
                     </div>   

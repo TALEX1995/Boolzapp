@@ -181,3 +181,17 @@ textarea {
 }
 
 
+
+/* Remove message */
+
+.fa-chevron-down {
+    font-size: 12px;
+}
+
+.message-views-area .message .remove-message {
+    background-color: red;
+}
+
+
+
+

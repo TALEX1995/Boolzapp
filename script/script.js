@@ -257,10 +257,9 @@ const app = Vue.createApp ({
 
 
       addMessage () {
-        // if(!this.newMessage.lenght) return
+        if(!this.newMessage) return
         
-
-        newMessage = {
+        const newMessage = {
           status: 'sent',
           id: new Date().getTime(),
           date: this.getDateRealTime(),
@@ -298,7 +297,7 @@ const app = Vue.createApp ({
 
       answerTimeout () {
         setTimeout(() => {
-          newReceivedMessage = {
+          const newReceivedMessage = {
             status: 'received',
             id: new Date().getTime(),
             date: this.getDateRealTime(),
