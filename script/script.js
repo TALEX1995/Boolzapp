@@ -244,7 +244,7 @@ const app = Vue.createApp ({
       },
 
       currentMessage () {
-        return this.currentChat.find(message => message.id === currentMessageId)
+        return this.currentChat.find(message => message.id === this.currentMessageId)
       }
 
 
@@ -309,7 +309,7 @@ const app = Vue.createApp ({
         return `${day}/${month}/${year} ${hour}:${minute}:${second}`;
       },
 
-
+      // Automatic Answer
       answerTimeout () {
         setTimeout(() => {
           const newReceivedMessage = {
@@ -323,6 +323,16 @@ const app = Vue.createApp ({
 
         }, "1000");
       },
+
+
+      // la current chat e readonly quindi dovrò trovare il modo di agire direttamente nei data
+      // Delete Message
+      deleteMessage (currentId) {
+        this.currentChat = this.currentChat.filter((message) => {
+          return currentId !== this.currentMessageId
+        })
+        console.log('ciao')
+      }
 
 
       

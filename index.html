@@ -89,10 +89,7 @@
                         <div class="position-relative">
                             <i @click="setCurrentMessageId(message)" class="fa-solid fa-chevron-down"></i>
                             <div v-if="currentMessageId === message.id" class="remove-message position-absolute p-2">
-                                <span>Cancella Messaggio</span>
-                            </div>
-                            <div v-else class="remove-message position-absolute p-2 d-none">
-                                <span>Cancella Messaggio</span>
+                                <span @click="deleteMessage(message.id)">Cancella Messaggio</span>
                             </div>
                         </div>
                         <span>{{ message.message }}</span>
