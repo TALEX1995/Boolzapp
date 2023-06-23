@@ -88,7 +88,10 @@
                     <div class="message d-flex flex-column ps-2 pe-1">
                         <div class="position-relative">
                             <i @click="setCurrentMessageId(message)" class="fa-solid fa-chevron-down"></i>
-                            <div class="remove-message position-absolute p-2" :class="{'d-none' : dropDownRemoveMess}">
+                            <div v-if="currentMessageId === message.id" class="remove-message position-absolute p-2">
+                                <span>Cancella Messaggio</span>
+                            </div>
+                            <div v-else class="remove-message position-absolute p-2 d-none">
                                 <span>Cancella Messaggio</span>
                             </div>
                         </div>

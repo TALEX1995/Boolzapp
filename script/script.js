@@ -16,6 +16,9 @@ const app = Vue.createApp ({
           // Input Filter
           searchUser: '',
 
+          // Current message id used to show the dropdown message menu
+          currentMessageId: 0, 
+
           // User info
           user: {
             name: 'Alex Tanase',
@@ -215,11 +218,7 @@ const app = Vue.createApp ({
               ],
             }
           ],
-
-          currentMessageId: 0,
-          dropDownRemoveMess: true,
-
-          
+      
         }
     },
 
@@ -244,9 +243,9 @@ const app = Vue.createApp ({
         })
       },
 
-      // currentMessage () {
-      //   return this.currentChat.find(message => message.id === currentMessageId)
-      // }
+      currentMessage () {
+        return this.currentChat.find(message => message.id === currentMessageId)
+      }
 
 
     },
@@ -260,10 +259,16 @@ const app = Vue.createApp ({
       
       setCurrentId (contact) {
         this.currentId = contact.id
+
+        // Remove current Message id to not see the remove message option when change chat
+        this.currentMessageId = 0
       },
 
       setCurrentMessageId (message) {
-        this.currentMessageId = message.id
+        // Condition to see if the dropdown message menu is already clicked else change current Message id
+        if(this.currentMessageId === message.id) this.currentMessageId = 0
+        else this.currentMessageId = message.id
+        
       },
 
       addMessage () {
@@ -320,9 +325,7 @@ const app = Vue.createApp ({
       },
 
 
-      toggleRemoveMessage () {
-        this.dropDownRemoveMess = !this.dropDownRemoveMess
-      }
+      
     }
 
 })
