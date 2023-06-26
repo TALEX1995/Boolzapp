@@ -341,6 +341,13 @@ const app = Vue.createApp ({
         
       },
 
+      lastMessageText(contact) {
+        return contact.messages[contact.messages.length - 1].message
+      },
+
+      lastMessageDate (contact) {
+        return contact.messages[contact.messages.length - 1].date
+      }
       
       
     }

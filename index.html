@@ -61,10 +61,10 @@
                     <img :src="takeAvatar(contact)" :alt="contact.name" class="m-3">
                     <div class="mt-3 flex-grow-1">
                         <span class="my-3 fw-bolder">{{ contact.name }}</span> 
-                        <span class="d-block"> {{ contact.messages[contact.messages.length - 1].message }} </span>
+                        <span class="d-block"> {{ lastMessageText(contact) }} </span>
                     </div>
                     <div class="flex-shrink-0"> 
-                        <span class="me-2">{{ contact.messages[contact.messages.length - 1].date }}</span>
+                        <span class="me-2">{{ lastMessageDate(contact) }}</span>
                     </div>
                 </div>
             </div>
