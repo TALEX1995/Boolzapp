@@ -243,9 +243,10 @@ const app = Vue.createApp ({
         })
       },
 
+      // Current message
       currentMessage () {
         return this.currentChat.find(message => message.id === this.currentMessageId)
-      }
+      },
 
 
     },
